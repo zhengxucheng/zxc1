@@ -12,8 +12,8 @@ void hello()
 }
 void help()
 {
-    printf("show the help-----\n");
-    printf("you can input quit hello help add sub mult square:\n");
+    printf("show th help-----\n");
+    printf("you can input quit hello help add sub mult square time:\n");
 }
 void add()
 {
