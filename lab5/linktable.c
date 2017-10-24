@@ -4,6 +4,17 @@
 #include"linktable.h"
 
 /*
+ * LinkTable Type
+ */
+typedef struct LinkTable
+{
+    tLinkTableNode *pHead;
+    tLinkTableNode *pTail;
+    int			SumOfNode;
+    pthread_mutex_t mutex;
+}tLinkTable;
+
+/*
  * Create a LinkTable
  */
 tLinkTable * CreateLinkTable()

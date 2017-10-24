@@ -1,25 +1,3 @@
-
-/********************************************************************/
-/* Copyright (C) SSE-USTC, 2012-2013                                */
-/*                                                                  */
-/*  FILE NAME             :  testlinktabe.c                         */
-/*  PRINCIPAL AUTHOR      :  Mengning                               */
-/*  SUBSYSTEM NAME        :  LinkTable                              */
-/*  MODULE NAME           :  LinkTable                              */
-/*  LANGUAGE              :  C                                      */
-/*  TARGET ENVIRONMENT    :  ANY                                    */
-/*  DATE OF FIRST RELEASE :  2012/12/30                             */
-/*  DESCRIPTION           :  test of Link Table                     */
-/********************************************************************/
-
-/*
- * Revision log:
- *
- * Created by Mengning,2012/12/30
- * Verified callback and head/next for search by Mengning,2012/09/17
- *
- */
-
 #include<stdio.h>
 #include<stdlib.h>
 #include<assert.h>
@@ -32,6 +10,17 @@ typedef struct Node
     tLinkTableNode * pNext;
     int data;
 }tNode;
+/*
+ * LinkTable Type
+ */
+typedef struct LinkTable
+{
+    tLinkTableNode *pHead;
+    tLinkTableNode *pTail;
+    int			SumOfNode;
+    pthread_mutex_t mutex;
+}tLinkTable;
+
 
 tNode * Search(tLinkTable *pLinkTable);
 int SearchCondition(tLinkTableNode * pLinkTableNode);
