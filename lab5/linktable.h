@@ -14,6 +14,7 @@ typedef struct LinkTableNode
     struct LinkTableNode * pNext;
 }tLinkTableNode;
 
+typedef struct LinkTable tLinkTable;
 /*
  * Create a LinkTable
  */
